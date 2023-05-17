@@ -1,9 +1,25 @@
 /*3. Write a Dart Program to make a simple calculator functionality by creating various different functions with switch case.*/
 import 'dart:io';
 
+void add({double a, double b}) {
+ print("Addition is : ${a+b}");
+}
+
+void subtract(double a, double b) {
+  print("Subtraction is : ${a-b}");
+}
+
+void multiply(double a, double b) {
+  print("Multiplication is : ${a*b}");
+}
+
+void divide(double a, double b) {
+  print("Division is : ${a/b}");
+}
+
+
 void main() {
-  print("Simple Calculator");
-  print("------------------");
+ 
   
   double num1, num2;
   int choice;
@@ -23,42 +39,23 @@ void main() {
   print("\nEnter your choice (1-4): ");
   choice = int.parse(stdin.readLineSync()!);
   
-  double result;
+  // double result;
   
   switch (choice) {
     case 1:
-      result = add(num1, num2);
-      print("\nResult: $result");
+      add(num1,num2);
       break;
     case 2:
-      result = subtract(num1, num2);
-      print("\nResult: $result");
+      subtract(num1, num2);
       break;
     case 3:
-      result = multiply(num1, num2);
-      print("\nResult: $result");
+      multiply(num1, num2);
       break;
     case 4:
-      result = divide(num1, num2);
-      print("\nResult: $result");
+      divide(num1, num2);
       break;
     default:
       print("\nInvalid choice. Please choose a number from 1 to 4.");
   }
 }
 
-double add(double a, double b) {
-  return a + b;
-}
-
-double subtract(double a, double b) {
-  return a - b;
-}
-
-double multiply(double a, double b) {
-  return a * b;
-}
-
-double divide(double a, double b) {
-  return a / b;
-}
